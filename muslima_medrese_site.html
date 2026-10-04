@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ky">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Муслима атындагы медресе диний уюму</title>
+  <style>
+    :root {
+      --green: #176b4d;
+      --dark: #0c3d2d;
+      --gold: #c89b3c;
+      --cream: #f7f4ec;
+      --white: #fff;
+      --text: #26352f
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: Arial, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(12, 61, 45, .96);
+      backdrop-filter: blur(8px);
+      color: white
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 19px
+    }
+
+    .logo span {
+      color: #e6c36b
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px
+    }
+
+    nav a:hover {
+      color: #e6c36b
+    }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, rgba(12, 61, 45, .94), rgba(23, 107, 77, .82)), radial-gradient(circle at 20% 20%, #d6b65b55, transparent 35%);
+      padding: 70px 20px
+    }
+
+    .hero-inner {
+      max-width: 900px;
+      margin: auto
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid #e6c36b;
+      border-radius: 999px;
+      padding: 7px 16px;
+      color: #f1d78f;
+      margin-bottom: 22px
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: 1.1;
+      margin-bottom: 20px
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 760px;
+      margin: 0 auto 30px;
+      color: #eef7f1
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 10px;
+      background: #d3aa50;
+      color: #163b2d;
+      text-decoration: none;
+      font-weight: 700;
+      margin: 5px
+    }
+
+    .btn.alt {
+      background: transparent;
+      color: white;
+      border: 1px solid #d3aa50
+    }
+
+    section {
+      padding: 75px 20px
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--dark);
+      font-size: 34px;
+      margin-bottom: 12px
+    }
+
+    .section-sub {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 40px;
+      color: #65736d
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 25px #163b2d12;
+      border: 1px solid #e7e1d4
+    }
+
+    .card h3 {
+      color: var(--green);
+      margin-bottom: 10px
+    }
+
+    .icon {
+      font-size: 35px;
+      margin-bottom: 8px
+    }
+
+    .about {
+      background: white
+    }
+
+    .about-box {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 30px;
+      align-items: stretch
+    }
+
+    .quote {
+      background: var(--dark);
+      color: white;
+      border-radius: 22px;
+      padding: 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    .quote strong {
+      color: #e6c36b;
+      font-size: 18px
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 25px
+    }
+
+    .stat {
+      background: var(--cream);
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center
+    }
+
+    .stat b {
+      display: block;
+      font-size: 30px;
+      color: var(--green)
+    }
+
+    .programs {
+      grid-template-columns: repeat(4, 1fr)
+    }
+
+    .programs .card {
+      text-align: center
+    }
+
+    .admission {
+      background: linear-gradient(135deg, #0c3d2d, #176b4d);
+      color: white
+    }
+
+    .admission .section-title {
+      color: white
+    }
+
+    .admission .section-sub {
+      color: #d9ebe2
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .step {
+      background: #ffffff14;
+      border: 1px solid #ffffff2b;
+      border-radius: 18px;
+      padding: 25px
+    }
+
+    .step b {
+      display: block;
+      color: #e6c36b;
+      font-size: 25px;
+      margin-bottom: 8px
+    }
+
+    .contact {
+      background: white
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px
+    }
+
+    .contact-card {
+      padding: 28px;
+      background: var(--cream);
+      border-radius: 18px
+    }
+
+    .contact-card a {
+      color: var(--green);
+      font-weight: 700
+    }
+
+    footer {
+      background: #092f23;
+      color: #d8e7df;
+      text-align: center;
+      padding: 35px 20px
+    }
+
+    .footer-title {
+      color: #e6c36b;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 6px
+    }
+
+    @media(max-width:800px) {
+      nav {
+        display: none
+      }
+
+      .grid,
+      .about-box,
+      .contact-grid,
+      .steps {
+        grid-template-columns: 1fr
+      }
+
+      .programs {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      h1 {
+        font-size: 42px
+      }
+
+      .hero {
+        min-height: 580px
+      }
+    }
+
+    @media(max-width:480px) {
+      .programs {
+        grid-template-columns: 1fr
+      }
+
+      .stats {
+        grid-template-columns: 1fr
+      }
+
+      .nav {
+        padding: 12px 14px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo">🕌 <span>Муслима</span> медресеси</div>
+      <nav>
+        <a href="#about">Медресе</a>
+        <a href="#program">Окуу</a>
+        <a href="#admission">Кабыл алуу</a>
+        <a href="#teachers">Мугалимдер</a>
+        <a href="#contact">Байланыш</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="badge">2016-жылдан бери</div>
+        <h1>Муслима атындагы медресе диний уюму</h1>
+        <p>Дин жана шарият адистерин, ошондой эле Ыйык Куран хафизаларын даярдоого багытталган билим берүү жайы.</p>
+        <a class="btn" href="#admission">Окууга кабыл алуу</a>
+        <a class="btn alt" href="#contact">Байланышуу</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">Медресе жөнүндө</h2>
+        <p class="section-sub">Дүйнө жана акырет илимдерин терең жана пайдалуу үйрөнүүгө багытталган билим берүү.</p>
+        <div class="about-box">
+          <div class="card">
+            <h3>Биздин максат</h3>
+            <p>Медресе дин жана шарият адистерин жана Ыйык Куран хафизаларын даярдайт. Дүйнө жана акырет илимдерин
+              терең, пайдалуу ээлеш үчүн Алла Таала кадыр кылганча аракет кылабыз.</p>
+            <div class="stats">
+              <div class="stat"><b>2016</b>Негизделген жыл</div>
+              <div class="stat"><b>16</b>Мугалим</div>
+              <div class="stat"><b>20+</b>Сабак</div>
+            </div>
+          </div>
+          <div class="quote">
+            <strong>📖 Билим — жол</strong>
+            <p style="font-size:22px;margin-top:14px">«Раббим, илимимди арттыр!»</p>
+            <p style="margin-top:10px;color:#cfe2d9">Куран, илим жана адеп менен келечекке кадам.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="program">
+      <div class="container">
+        <h2 class="section-title">Окуу программасы</h2>
+        <p class="section-sub">Медреседе 20дан ашуун багыттагы сабактар окутулат.</p>
+        <div class="grid programs">
+          <div class="card">
+            <div class="icon">📖</div>
+            <h3>Куран</h3>
+            <p>Ыйык Куранды үйрөнүү жана жаттоо.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🕋</div>
+            <h3>Шарият</h3>
+            <p>Дин жана шарият боюнча билим.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🗣️</div>
+            <h3>Араб тили</h3>
+            <p>Диний билимди өздөштүрүүгө жардам берген тил үйрөнүү.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📚</div>
+            <h3>20+ сабак</h3>
+            <p>Окуу программасынын кеңири багыттары.</p>
+          </div>
+        </div>
+        <p style="text-align:center;margin-top:22px;color:#65736d">Окуу мөөнөттөрү: <b>3 ай · 1 жыл · 3 жыл · 6 жыл</b>
+        </p>
+      </div>
+    </section>
+
+    <section id="admission" class="admission">
+      <div class="container">
+        <h2 class="section-title">Кабыл алуу</h2>
+        <p class="section-sub">Окууга кабыл алуу 25-августтан башталат. Жаш курагы: 7 жаштан 70 жашка чейин.</p>
+        <div class="steps">
+          <div class="step"><b>01</b>
+            <h3>Маалымат алуу</h3>
+            <p>Окуу шарттары жана багыттар боюнча байланышып, маалымат алыңыз.</p>
+          </div>
+          <div class="step"><b>02</b>
+            <h3>Кабыл алуу</h3>
+            <p>Кабыл алуу боюнча талаптарды тактап, керектүү документтерди даярдаңыз.</p>
+          </div>
+          <div class="step"><b>03</b>
+            <h3>Окууну баштоо</h3>
+            <p>Тандалган окуу мөөнөтүнө ылайык билим алууну баштаңыз.</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:30px">
+          <a class="btn" href="tel:+996553338417">📞 0553 33 84 17</a>
+          <a class="btn" href="https://wa.me/996553338417" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="teachers">
+      <div class="container">
+        <h2 class="section-title">Мугалимдер</h2>
+        <p class="section-sub">Медреседе 16 мугалим эмгектенет.</p>
+        <div class="card" style="text-align:center;padding:45px">
+          <div class="icon">👩‍🏫</div>
+          <h3>16 мугалим</h3>
+          <p>Мугалимдердин аты-жөнү жана сүрөттөрү кийин кошулат.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Хадистер жана аяттар</h2>
+        <p class="section-sub">Бул бөлүмгө медресе тандаган хадистерди жана аяттарды кийин кошууга болот.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>📖 Аят</h3>
+            <p>«Раббим, илимимди арттыр!»</p><small>Та-Ха сүрөсү, 114-аят</small>
+          </div>
+          <div class="card">
+            <h3>🌙 Хадис</h3>
+            <p>Бул жерге медресе тарабынан тандалган хадис жайгаштырылат.</p>
+          </div>
+          <div class="card">
+            <h3>✨ Насыйкат</h3>
+            <p>Бул жерге кыскача насыйкат же күнүмдүк эскертүү кошсо болот.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Байланыш</h2>
+        <p class="section-sub">Окуу жана кабыл алуу боюнча биз менен байланышыңыз.</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>📍 Дарек</h3>
+            <p>Ош облусу, Кара-Суу району, Датка а.а-ы</p>
+            <p>Ош-3000, 27/1</p>
+          </div>
+          <div class="contact-card">
+            <h3>📞 Телефон</h3>
+            <p><a href="tel:+996553338417">0553 33 84 17</a></p>
+            <p><a href="https://wa.me/996553338417" target="_blank">WhatsApp аркылуу жазуу</a></p>
+            <p><a href="mailto:muslimamedresse@gmail.com">muslimamedresse@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-title">🕌 Муслима атындагы медресе диний уюму</div>
+    <p>Ош облусу, Кара-Суу району · 2016</p>
+    <p style="margin-top:8px;font-size:13px">© 2026 Муслима медресеси. Бардык укуктар корголгон.</p>
+  </footer>
+</body>
+
+</html>
